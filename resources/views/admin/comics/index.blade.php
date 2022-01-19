@@ -14,6 +14,7 @@
       <th scope="col">Series</th>
       <th scope="col">Sale_date</th>
       <th scope="col">Type</th>
+      <th scope="col">Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -25,6 +26,7 @@
             <td>{{ $comic->series }}</td>
             <td>{{ $comic->sale_date }}</td>
             <td>{{ $comic->type }}</td>
+            <td><a href="">View</a> - <a href="">Edit</a> - <a href="">Delete</a></td>
         </tr>
         @endforeach
   </tbody>

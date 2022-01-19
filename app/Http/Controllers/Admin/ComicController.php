@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Comic;
+use function GuzzleHttp\Promise\all;
 use Illuminate\Http\Request;
 
 class ComicController extends Controller
@@ -39,7 +40,19 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //ddd($request->all());
+        $comic = new Comic();
+        $comic->title = $request->title;
+        $comic->description = $request->description;
+        $comic->thumb = $request->thumb;
+        $comic->price = $request->price;
+        $comic->series = $request->series;
+        $comic->sale_date = $request->sale_date;
+        $comic->type = $request->type;
+        $comic->save();
+
+        return redirect()->route('admin.comics.index');
+
     }
 
     /**

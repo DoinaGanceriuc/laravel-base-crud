@@ -5,7 +5,8 @@
 <div class="container">
     <h2>Aggiungi nuovo fumetto</h2>
 
-    <form action="" method="post">
+    <form action="{{ route('admin.comics.store') }}" method="post">
+        @csrf
         <div class="mb-3">
             <label for="title" class="form-label">Titolo fumetto</label>
             <input type="text" name="title" id="title" class="form-control" aria-describedby="titleHelper" placeholder="Scrivi qui il titolo del fumetto">
@@ -28,13 +29,13 @@
         </div>
         <div class="mb-3">
             <label for="sale_date" class="form-label">Data di uscita</label>
-            <input type="text" name="sale_date" id="sale_date" class="form-control" aria-describedby="sale_dateHelper" placeholder="">
+            <input type="text" name="sale_date" id="sale_date" class="form-control" aria-describedby="sale_dateHelper" placeholder="Indicare la data nel formato YYYY-MM-DD">
         </div>
         <div class="mb-3">
             <label for="type" class="form-label">Tipologia di fumetto</label>
-            <input type="text" name="type" id="type" class="form-control" aria-describedby="typeHelper" placeholder="Indicare la data nel formato YYYY-MM-DD">
+            <input type="text" name="type" id="type" class="form-control" aria-describedby="typeHelper" placeholder="">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Salva</button>
     </form>
 </div>
 
