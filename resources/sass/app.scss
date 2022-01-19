@@ -10,3 +10,124 @@
 a {
     text-decoration: none;
 }
+
+/* Variables */
+$color_primary: #0282f9;
+$color_bg_primary: #1c1c1c;
+
+/* Header */
+
+#site_header {
+    height: 150px;
+    .top {
+        background-color: $color_primary;
+        padding: 0.5rem 0;
+        nav {
+            text-align: right;
+            & a {
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 0.75rem;
+                font-weight: bold;
+            }
+            .sigla {
+                font-size: 0.5rem;
+                vertical-align: super;
+                font-weight: normal;
+            }
+        }
+    }
+    .menu {
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .list {
+            display: flex;
+            ul {
+                display: flex;
+                list-style: none;
+                li {
+                    padding: 0 1rem;
+                    font-size: 0.75rem;
+                    font-weight: bold;
+
+                    a {
+                        text-decoration: none;
+                        color: #1c1c1c;
+                        display: inline-block;
+                        padding: 2rem 0;
+
+                        &:hover {
+                            color: $color_primary;
+                            border-bottom: 5px solid $color_primary;
+                        }
+                    }
+                }
+            }
+        }
+        .search {
+            text-align: right;
+            & a {
+                font-size: 0.9rem;
+            }
+            .list_active {
+                color: #1c1c1c;
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 100px;
+                    height: 2px;
+                    background-color: $color_primary;
+                    margin: auto;
+                    margin-top: 0.3rem;
+                }
+            }
+        }
+    }
+}
+
+/* Main */
+
+#site_main {
+    height: calc(100vh - 250px);
+    overflow: auto;
+}
+
+/* Footer */
+
+#site_footer {
+    height: 100px;
+    /* socials */
+    .socials {
+        background-color: #303030;
+        padding: 2rem 0;
+        & .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .btn {
+                border: 1px solid $color_primary;
+                padding: 1rem;
+
+                & a {
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+            .left_icons {
+                display: flex;
+                align-items: center;
+
+                & h4 {
+                    color: $color_primary;
+                    margin-right: 1rem;
+                }
+                & img {
+                    padding: 0 0.5rem;
+                }
+            }
+        }
+    }
+}
