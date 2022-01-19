@@ -2,8 +2,8 @@
 
 @section('content')
 
-<div class="container">
-    <h1>Admin all comics</h1>
+<div class="container p-3">
+    <h1 class="text-center pb-5">Admin all comics</h1>
 
     <table class="table table-striped">
   <thead>
