@@ -13,6 +13,14 @@
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
     </head>
     <body>
-        @yield('content')
+         @include('partials.header')
+        <!-- /#site_header -->
+        <main id="site_main">
+            @yield('content')
+        </main>
+        <!-- /#site_main -->
+
+        @include('partials.footer')
+        <!-- /#site_footer -->
     </body>
 </html>
