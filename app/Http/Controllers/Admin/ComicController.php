@@ -41,7 +41,7 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         //ddd($request->all());
-        $comic = new Comic();
+        /* $comic = new Comic();
         $comic->title = $request->title;
         $comic->description = $request->description;
         $comic->thumb = $request->thumb;
@@ -49,7 +49,20 @@ class ComicController extends Controller
         $comic->series = $request->series;
         $comic->sale_date = $request->sale_date;
         $comic->type = $request->type;
-        $comic->save();
+        $comic->save(); */
+
+        $validated = $request->validate([
+            'title' => 'required|unique:comics|max:255',
+            'description' => 'nullable',
+            'thumb' => 'required|max:255',
+            'price' => 'nullable',
+            'series' => 'required|max:255',
+            'sale_date' => 'required|date_format:Y-m-d',
+            'type' => 'nullable',
+        ]);
+
+        //ddd($validated);
+        Comic::create($validated);
 
         return redirect()->route('admin.comics.index');
 
