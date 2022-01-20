@@ -21,7 +21,7 @@
                 <h2> {{ strtoupper($comic->title) }} </h2>
                 <div class="single_album_info">
                     <div class="avaiable col-6">
-                        <p>U.S. Price: <span>{{ $comic->price }}</span></p>
+                        <p>U.S. Price: <span>{{ $comic->price }}&#8364;</span></p>
                         <p>AVAIABLE</p>
                     </div>
                     <!-- /.avaiable -->
