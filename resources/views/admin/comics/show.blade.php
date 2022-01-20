@@ -21,6 +21,9 @@
                 </div>
             </div>
         </div>
+        <div class="text-center">
+            <a class="btn btn-primary" href="{{route('admin.comics.index')}}">Tutti i fumetti</a>
+        </div>
     </div>
     <!-- /.container -->
 </div>
