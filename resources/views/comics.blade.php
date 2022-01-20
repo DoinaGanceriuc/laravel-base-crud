@@ -7,7 +7,7 @@
             @foreach ($comics as $comic)
                 <div class="col">
                     <div class="card h-100">
-                        <img src="{{ $comic->thumb }}" class="card-img-top" alt="{{ $comic->title }}">
+                        <a href="{{route('show', $comic->id)}}"><img src="{{ $comic->thumb }}" class="card-img-top" alt="{{ $comic->title }}"></a>
                         <div class="card-body">
                             <h5 class="card-title">{{ strtoupper($comic->series) }} </h5>
                         </div>
