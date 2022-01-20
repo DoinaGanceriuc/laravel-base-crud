@@ -4,15 +4,7 @@
 
 <div class="container p-5">
     <h2 class="text-center">Aggiorna fumetto</h2>
-    @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-    @endif
+    @include('partials.errors')
 
 
     <form action="{{route('admin.comics.update', $comic->id)}}" method="post">
