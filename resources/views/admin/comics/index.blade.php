@@ -4,7 +4,9 @@
 
 <div class="container p-3">
     <h1 class="text-center pb-5">Admin all comics</h1>
-
+    <div class="text-center mb-5">
+        <a href="{{route('admin.comics.create')}}" class="btn btn-primary">Create</a>
+    </div>
     <table class="table table-striped">
   <thead>
     <tr>
@@ -26,7 +28,7 @@
             <td>{{ $comic->series }}</td>
             <td>{{ $comic->sale_date }}</td>
             <td>{{ $comic->type }}</td>
-            <td><a href="{{route('admin.comics.show', $comic->id)}}">View</a> - <a href="">Edit</a> - <a href="">Delete</a></td>
+            <td><a href="{{route('admin.comics.show', $comic->id)}}">View</a> - <a href="{{route('admin.comics.edit', $comic->id)}}">Edit</a> - <a href="">Delete</a></td>
         </tr>
         @endforeach
   </tbody>
