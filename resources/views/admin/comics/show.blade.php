@@ -14,9 +14,9 @@
                         <h5 class="card-title">{{ strtoupper($comic->series) }}</h5>
                         <p class="card-text">{{$comic->description}}</p>
                         <p class="card-text">Serie: {{$comic->series}}</p>
-                        <p class="card-text">Prezzo: {{$comic->price}}</p>
+                        <p class="card-text">Prezzo: {{$comic->price}}&#8364;</p>
                         <p class="card-text">Tipologia fumetto: {{$comic->type}}</p>
-                        <p class="card-text"><small class="text-muted">Data uscita: {{$comic->sale_date}}</small></p>
+                        <p class="card-text"><small class="text-muted">Data uscita: {{$comic->sale_date->format('d/m/Y') }}</small></p>
                     </div>
                 </div>
             </div>
