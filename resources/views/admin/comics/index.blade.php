@@ -26,13 +26,13 @@
             <td>{{ $comic->title }}</td>
             <td>{{ $comic->price }}</td>
             <td>{{ $comic->series }}</td>
-            <td>{{ $comic->sale_date }}</td>
+            <td>{{ $comic->sale_date->format('d/m/Y') }}</td>
             <td>{{ $comic->type }}</td>
             <td>
-                <a href="{{route('admin.comics.show', $comic->id)}}">View</a> -
-                <a href="{{route('admin.comics.edit', $comic->id)}}">Edit</a>
+                <a class="btn btn-primary" href="{{route('admin.comics.show', $comic->id)}}"><i class="fas fa-eye"></i></a>
+                <a class="btn btn-warning" href="{{route('admin.comics.edit', $comic->id)}}"><i class="fas fa-edit"></i></a>
                 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete{{$comic->id}}">
-                Delete
+                <i class="fas fa-trash-alt"></i>
                 </button>
                 <div class="modal fade" id="delete{{$comic->id}}" tabindex="-1" aria-labelledby="modal-{{$comic->id}}Label" aria-hidden="true">
                 <div class="modal-dialog">
