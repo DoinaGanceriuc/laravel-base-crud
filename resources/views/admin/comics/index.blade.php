@@ -26,7 +26,7 @@
             <td>{{ $comic->series }}</td>
             <td>{{ $comic->sale_date }}</td>
             <td>{{ $comic->type }}</td>
-            <td><a href="">View</a> - <a href="">Edit</a> - <a href="">Delete</a></td>
+            <td><a href="{{route('admin.comics.show', $comic->id)}}">View</a> - <a href="">Edit</a> - <a href="">Delete</a></td>
         </tr>
         @endforeach
   </tbody>
