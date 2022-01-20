@@ -36,6 +36,7 @@
             <input type="text" name="type" id="type" class="form-control" aria-describedby="typeHelper" placeholder="">
         </div>
         <button type="submit" class="btn btn-primary">Salva</button>
+        <a class="btn btn-warning" href="{{route('admin.comics.index')}}">Annulla</a>
     </form>
 </div>
 
