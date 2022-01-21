@@ -62,6 +62,7 @@ $color_bg_primary: #1c1c1c;
                         color: #1c1c1c;
                         display: inline-block;
                         padding: 2rem 0;
+                        border-bottom: 5px solid transparent;
 
                         &:hover {
                             color: $color_primary;
@@ -206,4 +207,25 @@ $color_bg_primary: #1c1c1c;
             }
         }
     }
+}
+
+/* Admin */
+
+.admin_site_main {
+    height: calc(100vh - 100px);
+}
+
+aside {
+    width: 300px;
+
+    a {
+        border-bottom: 3px solid transparent;
+
+        &:hover {
+            border-bottom: 3px solid $color_primary;
+        }
+    }
+}
+.content {
+    width: calc(100vw - 300px);
 }

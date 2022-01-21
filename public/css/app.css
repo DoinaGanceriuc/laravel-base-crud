@@ -11307,6 +11307,7 @@ a {
   color: #1c1c1c;
   display: inline-block;
   padding: 2rem 0;
+  border-bottom: 5px solid transparent;
 }
 #site_header .menu .list ul li a:hover {
   color: #0282f9;
@@ -11433,4 +11434,23 @@ a {
 }
 #site_footer .socials .container .left_icons img {
   padding: 0 0.5rem;
+}
+
+/* Admin */
+.admin_site_main {
+  height: calc(100vh - 100px);
+}
+
+aside {
+  width: 300px;
+}
+aside a {
+  border-bottom: 3px solid transparent;
+}
+aside a:hover {
+  border-bottom: 3px solid #0282f9;
+}
+
+.content {
+  width: calc(100vw - 300px);
 }
