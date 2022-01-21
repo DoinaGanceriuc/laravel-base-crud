@@ -1,18 +1,8 @@
 <header id="site_header">
-        <div class="top">
-                <nav class="container">
-                <a class="pr-4" href="#">DC Power <span class="sigla">SM</span> VISA <i class="far fa-registered"></i></a>
-                <a href="#">Additional dc Sites <i class="fas fa-sort-down"></i></a>
-                <a class="ms-5" href="{{route('admin.comics.index')}}">Administrator</a>
-            </nav>
-
-        </div>
+@include('partials.header_top')
     <div class="menu">
         <div class="container">
-                <div class="logo">
-                    <a href="{{route('home')}}"><img src="{{asset('img/dc-logo.png')}}" alt="logo dc azzurro" width="60"></a>
-                </div>
-                <!-- /.logo -->
+        @include('partials.logo')
                 <div class="list">
                     <ul>
                     <li><a href="#">CHARACTERS</a></li>
