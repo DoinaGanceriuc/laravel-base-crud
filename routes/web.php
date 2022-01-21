@@ -31,4 +31,6 @@ Route::get('/admin', function () {
     return view('admin.dashboard');
 })->name('admin.dashboard');
 
-Route::get('/movies', 'MovieController@index')->name('movies');
+/* Movies */
+Route::get('/movies', 'MovieController@index')->name('movies.index');
+Route::get('/movies/{movie}', 'MovieController@show')->name('movies.show');

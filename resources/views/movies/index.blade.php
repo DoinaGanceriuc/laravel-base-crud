@@ -7,7 +7,7 @@
             @foreach ($movies as $movie)
                 <div class="col">
                     <div class="card h-100">
-                        <a href="#"><img src="{{ $movie->image }}" class="card-img-top" alt="{{ $movie->title }}"></a>
+                        <a href="{{route('movies.show', $movie->id)}}"><img src="{{ $movie->image }}" class="card-img-top" alt="{{ $movie->title }}"></a>
                         <div class="card-body">
                             <h5 class="card-title">{{ strtoupper($movie->title) }} </h5>
                             <h6>{{ $movie->title }}</h6>
