@@ -30,3 +30,5 @@ Route::get('/admin', function () {
 
     return view('admin.dashboard');
 })->name('admin.dashboard');
+
+Route::get('/movies', 'MovieController@index')->name('movies');
