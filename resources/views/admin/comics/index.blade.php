@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 
 <div class="container p-3">
-    <h1 class="text-center pb-5">Admin all comics</h1>
-    <div class="text-center mb-5">
-        <a href="{{route('admin.comics.create')}}" class="btn btn-primary">Create</a>
+    <h2 class="text-center">All Comics</h2>
+    <div class="text-end mb-5">
+       <a href="{{route('admin.comics.create')}}" class="btn btn-primary">Create</a>
     </div>
     <table class="table table-striped">
   <thead>

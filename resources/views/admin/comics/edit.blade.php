@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 
@@ -41,7 +41,7 @@
         </div>
         <div class="mb-3">
             <label for="sale_date" class="form-label">Data di uscita</label>
-            <input type="text" name="sale_date" id="sale_date" class="form-control @error('sale_date') is-invalid @enderror" aria-describedby="sale_dateHelper" placeholder="Indicare la data nel formato YYYY-MM-DD" value="{{$comic->sale_date}}">
+            <input type="text" name="sale_date" id="sale_date" class="form-control @error('sale_date') is-invalid @enderror" aria-describedby="sale_dateHelper" placeholder="Indicare la data nel formato YYYY-MM-DD" value="{{$comic->sale_date->format('Y-m-d')}}">
             @error('sale_date')
              <div class="alert alert-danger">{{ $message }}</div>
             @enderror
