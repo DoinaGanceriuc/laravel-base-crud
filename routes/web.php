@@ -24,3 +24,9 @@ Route::get('/admin/comics/{comic}', 'Admin\ComicController@show')->name('admin.c
 Route::get('/admin/comics/{comic}/edit', 'Admin\ComicController@edit')->name('admin.comics.edit');
 Route::put('/admin/comics/{comic}', 'Admin\ComicController@update')->name('admin.comics.update');
 Route::delete('/admin/comics/{comic}', 'Admin\ComicController@destroy')->name('admin.comics.destroy');
+
+/* ADMIN */
+Route::get('/admin', function () {
+
+    return view('admin.dashboard');
+})->name('admin.dashboard');
