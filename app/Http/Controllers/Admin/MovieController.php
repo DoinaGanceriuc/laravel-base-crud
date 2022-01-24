@@ -15,7 +15,8 @@ class MovieController extends Controller
      */
     public function index()
     {
-        //
+        $movies = Movie::orderBy('id', 'desc')->paginate(12);
+        return view('admin.movies.index', compact('movies'));
     }
 
     /**
