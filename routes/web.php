@@ -34,3 +34,6 @@ Route::get('/admin', function () {
 /* Movies */
 Route::get('/movies', 'MovieController@index')->name('movies.index');
 Route::get('/movies/{movie}', 'MovieController@show')->name('movies.show');
+
+/* Admin Movies */
+Route::get('admin/movies.index', 'Admin\MovieController@index')->name('admin.movies.index');
