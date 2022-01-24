@@ -29,7 +29,7 @@
                                 <a class="nav-link" href="{{route('admin.comics.index')}}">Comics</a>
                         </li>
                         <li class="nav-item">
-                                <a class="nav-link" href="#">Movies</a>
+                                <a class="nav-link" href="{{route('admin.movies.index')}}">Movies</a>
                         </li>
                         <li class="nav-item">
                                 <a class="nav-link" href="#">Tv</a>
