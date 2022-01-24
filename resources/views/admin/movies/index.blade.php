@@ -5,7 +5,7 @@
 <div class="container p-3">
     <h2 class="text-center">All Movies</h2>
     <div class="text-end mb-5">
-       <a href="#" class="btn btn-primary">Create</a>
+       <a href="{{route('admin.movies.create')}}" class="btn btn-primary">Create</a>
     </div>
     <table class="table table-striped">
   <thead>
@@ -27,8 +27,8 @@
             <td>{{ $movie->original_title }}</td>
             <td>{{ $movie->genre }}</td>
             <td>
-                <a class="btn btn-primary" href="#"><i class="fas fa-eye"></i></a>
-                <a class="btn btn-warning" href="#"><i class="fas fa-edit"></i></a>
+                <a class="btn btn-primary" href="{{route('admin.movies.show', $movie->id)}}"><i class="fas fa-eye"></i></a>
+                <a class="btn btn-warning" href="{{route('admin.movies.edit', $movie->id)}}"><i class="fas fa-edit"></i></a>
                 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete{{$movie->id}}">
                 <i class="fas fa-trash-alt"></i>
                 </button>
@@ -36,7 +36,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="{{$movie->id}}Label">Stai cercanando di cancellare il fumetto {{$movie->title}}</h5>
+                        <h5 class="modal-title" id="{{$movie->id}}Label">Stai cercanando di cancellare il film {{$movie->title}}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -44,7 +44,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                         <form action="#" method="post">
+                         <form action="{{route('admin.movies.destroy', $movie->id)}}" method="post">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>

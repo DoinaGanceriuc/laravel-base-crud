@@ -36,4 +36,10 @@ Route::get('/movies', 'MovieController@index')->name('movies.index');
 Route::get('/movies/{movie}', 'MovieController@show')->name('movies.show');
 
 /* Admin Movies */
-Route::get('admin/movies.index', 'Admin\MovieController@index')->name('admin.movies.index');
+Route::get('admin/movies', 'Admin\MovieController@index')->name('admin.movies.index');
+Route::get('admin/movies/create', 'Admin\MovieController@create')->name('admin.movies.create');
+Route::post('admin/movies', 'Admin\MovieController@store')->name('admin.movies.store');
+Route::get('admin/movies/{movie}', 'Admin\MovieController@show')->name('admin.movies.show');
+Route::get('admin/movies/{movie}/edit', 'Admin\MovieController@edit')->name('admin.movies.edit');
+Route::put('admin/movies/{movie}', 'Admin\MovieController@update')->name('admin.movies.update');
+Route::delete('admin/movies/{movie}', 'Admin\MovieController@destroy')->name('admin.movies.destroy');
